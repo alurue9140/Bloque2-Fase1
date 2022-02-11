@@ -14,7 +14,7 @@ do
         #Añadimos el usuario con samba-tool y lo añadimos a la Unidad Organizativa grupo que le corresponde
         echo -n "Añadiendo usuario $LOGIN..."
         #Añade el usuario en la UO correspondiente
-        samba-tool user create $LOGIN zsx100* --given-name=$NOMBRE --surname=$APELLIDOS --must-change-at-next-login --userou=$UO --department=$DEP --mail=$MAIL
+        samba-tool user create $LOGIN zsx100* --given-name=$NOMBRE --surname=$APELLIDOS --must-change-at-next-login --userou=$UO --department=$DEP --mail=$MAIL --login-shell=/bin/bash
         #Se hace miembro del grupo correspondiente al usuario
         samba-tool group addmembers $GRUPO $LOGIN
         echo "[Usuario $LOGIN creado correctamente]"
