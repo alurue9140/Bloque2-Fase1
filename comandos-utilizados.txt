@@ -1,0 +1,2 @@
+#Deshabilitar usuarios
+samba-tool user disable 
